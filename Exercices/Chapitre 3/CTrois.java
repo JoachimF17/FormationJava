@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.lang.Math;
 
 public class CTrois
 {
@@ -22,12 +23,11 @@ public class CTrois
 		Vu qu'il n'y a pas de pieces de 10 centimes, il peut y avoir des problemes pour decomposer la somme, 
 		retirer 50 centimes de la somme de base permet de regler preventivement ces problemes
 		**********/
-		check = (int) (((entree%1)+0.001f)*10);
+		check = Math.round(((entree%1)+0.051f)*10); //+0.051f pour arrondir à l'unite superieure et limiter des excedants supplementaires
 
 		//condition pour savoir si on doit donner une piece de 50 a la fin
-		if(check%2 != 0)
+		if(check%2 != 0 && check <8)
 		{
-			System.out.println("prout");
 			pieceCinquante = true;
 			entree-=0.50f; //on soustrait fictivement les 50 centimes de la somme
 		}
@@ -103,7 +103,8 @@ public class CTrois
 		if(centimes>=20)
 		{
 			if(centimes>20)
-				System.out.println(((centimes/20)+1)+" pieces de 20 centimes");
+				System.out.println(((centimes/20)+1)+" pieces de 20 centimes"); /*+1 parce qu'on donnera toujours une
+																				piece en plus pour ne pas "voler" le client*/
 			else
 				System.out.println("1 piece de 20 centimes");
 		}
