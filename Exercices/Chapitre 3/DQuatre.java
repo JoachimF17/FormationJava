@@ -20,7 +20,7 @@ public class DQuatre
 		System.out.print("Entrez le dernier nombre : ");
 		c = sc.nextInt();
 
-		//conditions
+		//conditions pour mettre les variables dans l'ordre
 		if(a>b)
 		{
 			temp = a;
@@ -42,14 +42,16 @@ public class DQuatre
 		}
 
 		/************
-		on place le signe comme caractere pour economiser des "si" inutiles vu que les
-		chiffres sont dans l'ordre, ils n'y a plus qu'une seule condition à verifier, l'egalite
+		on place le signe comme char pour economiser des "si" inutiles vu que les
+		chiffres sont dans l'ordre, il n'y a plus qu'une seule condition à verifier, l'egalite
 		************/
+		//verif 1
 		if(a==b)
 			signe1 = '=';
 		else
 			signe1 = '<';
 
+		//verif 2
 		if(b==c)
 			signe2 = '=';
 		else
