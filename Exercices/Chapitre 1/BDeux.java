@@ -5,6 +5,7 @@ public class UnDeux
 		//declaration variables locales
 		float a, b, c, d, e, res;
 
+		//programme
 		//premiere ligne
 		a=150;
 		b=92;

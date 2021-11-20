@@ -5,7 +5,7 @@ public class BDeux
 	public static void main(String[] args)
 	{
 		//variables
-		int a, b;
+		float a, b;
 		//objets
 		Scanner sc = new Scanner(System.in);
 
@@ -13,9 +13,9 @@ public class BDeux
 		System.out.println("Comparaison entre deux nombres");
 		System.out.println("------------------------------");
 		System.out.println("Entrez un premier nombre");
-		a = sc.nextInt();
+		a = sc.nextFloat();
 		System.out.println("Entrez un second nombre");
-		b = sc.nextInt();
+		b = sc.nextFloat();
 
 		//condition
 		if(a>b)
@@ -24,7 +24,7 @@ public class BDeux
 		{
 			if(a<b)
 				System.out.println("Le nombre "+a+" est plus petit que le nombre "+b);
-			else
+			else //si ni plus grand ni plus petit alors d'office egal
 				System.out.println("Le nombre "+a+" est egal au nombre "+b);
 		}
 	}
