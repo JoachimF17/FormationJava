@@ -13,7 +13,7 @@ public class UnCinq
 		//programme
 		System.out.println("Calcul de la circonference d'un cercle");
 		System.out.println("--------------------------------------");
-		System.out.println("Entrez la valeur du rayon : ");
+		System.out.print("Entrez la valeur du rayon : ");
 		rayon = sc.nextFloat();
 		System.out.println("Circonference d'un cercle de "+rayon+" de rayon = "+(2*PI*rayon));
 	}

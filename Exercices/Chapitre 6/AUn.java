@@ -20,11 +20,12 @@ public class AUn
 		System.out.print("Saisissez le texte : ");
 		texte = sc.nextLine();
 		System.out.print("Saisissez le caractere a rechercher dans le texte : ");
-		caractere = sc.next().charAt(0);
+		caractere = sc.next().charAt(0); //ne prend en compte que le premier caract au cas ou l'utilisateur raconte sa life
 
 		//boucle qui va passer sur chaque caractere du texte
 		for(i = 0; i<texte.length(); i++)
 		{
+			//verification du caract
 			if(caractere == texte.charAt(i))
 			{
 				cpt++;
@@ -34,7 +35,7 @@ public class AUn
 			}
 		}
 
-		if(cpt == 0)
+		if(cpt == 0) //si on n'a pas trouve son caractere
 			System.out.println("Ce caractere ne se trouve pas dans le texte.");
 		else
 		{

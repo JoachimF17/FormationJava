@@ -21,9 +21,10 @@ public class FSix
 		texteSource = sc.nextLine();
 
 		//on passe le string en tableau de char pour pouvoir inverser caractere par caractere
-		charArray = new char[texteSource.length()];
-		charArray = texteSource.toCharArray();
+		charArray = new char[texteSource.length()]; //initialise un tableau de la longueur du texte
+		charArray = texteSource.toCharArray(); //passage en tableau
 
+		//length/2 on inverse le premier et dernier a chaque fois donc aucun besoin d'aller au-dela de la moitie
 		for(i = 0; i<(texteSource.length()/2); i++)
 		{
 			j = texteSource.length()-i-1; //redondant mais question de lisibilite

@@ -12,9 +12,9 @@ public class BDeux
 		//programme
 		System.out.println("Comparaison entre deux nombres");
 		System.out.println("------------------------------");
-		System.out.println("Entrez un premier nombre");
+		System.out.print("Entrez un premier nombre");
 		a = sc.nextFloat();
-		System.out.println("Entrez un second nombre");
+		System.out.print("Entrez un second nombre");
 		b = sc.nextFloat();
 
 		//condition

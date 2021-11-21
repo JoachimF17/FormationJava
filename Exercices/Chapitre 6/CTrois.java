@@ -35,6 +35,7 @@ public class CTrois
 		//la fonction replaceAll() rend l'exercice completement futile
 		nouveauTexte = texteSource.replaceAll(texteRecherche,texteRemplace); 
 
+		//affichage de fin
 		System.out.println("Ancien texte : "+texteSource);
 		System.out.println("Nouveau texte : "+nouveauTexte);
 	}

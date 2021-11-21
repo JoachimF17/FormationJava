@@ -33,7 +33,8 @@ public class BDeux
 				//on soustrait un texte de la longueur du texte recherche au texte source par soucis de clarte
 				sousTexte = texteSource.substring(i, i+texteRecherche.length());
 
-				if(texteRecherche.equals(sousTexte)) //comparaison du texte soustrait avec le texte recherche
+				//comparaison du texte soustrait avec le texte recherche
+				if(texteRecherche.equals(sousTexte)) //fonction equals() remplace le == pour un string
 				{
 					cpt++;
 					posLast = i+1; //+1 parce qu'on commence a zero
@@ -42,7 +43,7 @@ public class BDeux
 				}
 			}
 
-			if(cpt == 0)
+			if(cpt == 0) //si le texte n'apparait pas aucune raison d'afficher le resultat
 				System.out.println("Le bout de texte ne se situe pas dans le texte source.");
 			else
 			{

@@ -17,14 +17,14 @@ public class DQuatre
 		System.out.println("-------------------------");
 		System.out.println("Vous allez entrez plusieurs nombres, nous allons analyser les suites croissantes de nombres entres.");
 		System.out.println("En fin de programme, on vous renverra la plus grande suite, la plus petite suite, leurs positions, et le nombre d'occurrences.");
-		System.out.println("Entrez un nombre (100 pour arreter le programme) : ");
+		System.out.print("Entrez un nombre (100 pour arreter le programme) : ");
 		input = sc.nextFloat();
 
 		//condition initiale pour verifier que l'utilisateur ne rentre pas 100
 		if(input != 100)
 		{
 			lastInput = input; //on passe l'input actuel dans une autre variable pour comparer avec le prochain input
-			System.out.println("Entrez un nombre (100 pour arreter le programme) : ");
+			System.out.print("Entrez un nombre (100 pour arreter le programme) : ");
 			input = sc.nextFloat();
 
 			//boucle tant que l'utilisateur n'entre pas 100
@@ -80,7 +80,7 @@ public class DQuatre
 				}
 
 				lastInput = input; //a nouveau on passe le dernier input dans une autre variable en vue de la prochaine comparaison
-				System.out.println("Entrez un nombre (100 pour arreter le programme) : ");
+				System.out.print("Entrez un nombre (100 pour arreter le programme) : ");
 				input = sc.nextFloat();	
 			}
 		}

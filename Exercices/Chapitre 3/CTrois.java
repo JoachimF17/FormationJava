@@ -15,13 +15,13 @@ public class CTrois
 		//programme
 		System.out.println("Distribution de billets");
 		System.out.println("-----------------------");
-		System.out.println("Entrez la somme a decomposer");
+		System.out.print("Entrez la somme a decomposer");
 		entree = sc.nextFloat();
 		
 		/*********
-		initialisation de la variable "check" pour verifier si on doit supprimer 50 centimes de la somme
-		Vu qu'il n'y a pas de pieces de 10 centimes, il peut y avoir des problemes pour decomposer la somme, 
-		retirer 50 centimes de la somme de base permet de regler preventivement ces problemes
+		 * initialisation de la variable "check" pour verifier si on doit supprimer 50 centimes de la somme
+		 * Vu qu'il n'y a pas de pieces de 10 centimes, il peut y avoir des problemes pour decomposer la somme, 
+		 * retirer 50 centimes de la somme de base permet de regler preventivement ces problemes
 		**********/
 		check = Math.round(((entree%1)+0.051f)*10); //+0.051f pour arrondir à l'unite superieure et limiter des excedants supplementaires
 

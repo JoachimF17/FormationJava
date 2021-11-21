@@ -12,9 +12,9 @@ public class AUn
 		//programme
 		System.out.println("Calcul d'une equation du premier degre ax+b = 0");
 		System.out.println("-----------------------------------------------");
-		System.out.println("Entrez la valeur de a : ");
+		System.out.print("Entrez la valeur de a : ");
 		a = sc.nextFloat();
-		System.out.println("Entrez la valeur de b : ");
+		System.out.print("Entrez la valeur de b : ");
 		b = sc.nextFloat();
 
 		//condition

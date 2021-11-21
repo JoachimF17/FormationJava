@@ -12,9 +12,11 @@ public class UnSix
 		//programme
 		System.out.println("Calcul de la moyenne de trois nombres");
 		System.out.println("-------------------------------------");
-		System.out.println("Entrez trois nombres (ENTER) pour passer au suivant : ");
+		System.out.print("Entrez un premier nombre : ");
 		a = sc.nextFloat();
+		System.out.print("Entrez un deuxieme nombre : ");
 		b = sc.nextFloat();
+		System.out.print("Entrez un troisieme nombre : ");
 		c = sc.nextFloat();
 
 		System.out.println("Moyenne des 3 nombres = "+((a+b+c)/3));
