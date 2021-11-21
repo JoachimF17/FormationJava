@@ -20,11 +20,12 @@ public class CTrois
 		System.out.println("Entrez un nombre entier au clavier compris entre "+MIN+" et "+MAX+
 							" et le programme vous indiquera si le nombre recherche est plus petit ou plus grand.");
 		
-		/* Initialisation du chiffre aleatoire
+		/*************************************
+		 * Initialisation du chiffre aleatoire
 		 * La fonction Math.random() renvoie un float entre 0 et 1 (non compris), on multiplie donc par 100 ((MAX-MIN)+1) pour
 		 * 		renvoyer un chiffre entre 0 et 99
 		 * On utilise ensuie le (int) pour passer en int et "+ MIN" (donc + 1) pour passer de 0-99 a 1-100
-		*/
+		 *************************************/
 		rand = MIN + (int)(Math.random() * ((MAX - MIN)+1));
 
 		do
@@ -45,7 +46,7 @@ public class CTrois
 				if(input>rand) //plus petit ou plus grand
 					System.out.println("Le nombre recherche est plus petit");
 				else
-					System.out.println("Le nombre recherche est plus grand");				
+					System.out.println("Le nombre recherche est plus grand");
 			}
 		}while(!trouve);
 	}
