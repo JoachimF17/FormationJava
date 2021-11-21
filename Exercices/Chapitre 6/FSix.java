@@ -26,7 +26,7 @@ public class FSix
 
 		for(i = 0; i<(texteSource.length()/2); i++)
 		{
-			j = texteSource.length()-i-1;
+			j = texteSource.length()-i-1; //redondant mais question de lisibilite
 			temp = charArray[i];
 			charArray[i] = charArray[j];
 			charArray[j] = temp;
