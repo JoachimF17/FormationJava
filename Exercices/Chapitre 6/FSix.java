@@ -10,7 +10,6 @@ public class FSix
 		char[] charArray;
 		//objets
 		String texteSource = new String();
-		//String texteRemplace = new String();
 		Scanner sc = new Scanner(System.in);
 
 		//programme
