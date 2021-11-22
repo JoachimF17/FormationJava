@@ -15,7 +15,7 @@ public class CTrois
 		//programme
 		System.out.println("Distribution de billets");
 		System.out.println("-----------------------");
-		System.out.print("Entrez la somme a decomposer");
+		System.out.print("Entrez la somme a decomposer : ");
 		entree = sc.nextFloat();
 		
 		/*********
