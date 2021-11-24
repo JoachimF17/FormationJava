@@ -6,7 +6,7 @@ public class CTrois
 	public static void main(String[] args)
 	{
 		//variables
-		float entree;
+		float entree, mod;
 		int somme, centimes, check;
 		boolean pieceCinquante = false;
 		//objets
@@ -17,24 +17,28 @@ public class CTrois
 		System.out.println("-----------------------");
 		System.out.print("Entrez la somme a decomposer : ");
 		entree = sc.nextFloat();
-		
-		/*********
-		 * initialisation de la variable "check" pour verifier si on doit supprimer 50 centimes de la somme
-		 * Vu qu'il n'y a pas de pieces de 10 centimes, il peut y avoir des problemes pour decomposer la somme, 
-		 * retirer 50 centimes de la somme de base permet de regler preventivement ces problemes
-		**********/
-		check = Math.round(((entree%1)+0.051f)*10); //+0.051f pour arrondir à l'unite superieure et limiter des excedants supplementaires
-
-		//condition pour savoir si on doit donner une piece de 50 a la fin
-		if(check%2 != 0 && check <8)
-		{
-			pieceCinquante = true;
-			entree-=0.50f; //on soustrait fictivement les 50 centimes de la somme
-		}
 
 		//On dissocie les centimes des centaines et on passe le tout en int
 		centimes = (int) (((entree%1)+0.001f)*100);
 		somme = (int) entree;
+
+		//on arrondit les dizaines de centimes a l'unite superieure
+		centimes--; //securite si on est a .x0, on n'a alors pas besoin d'arrondir
+		centimes /= 10;
+		centimes++;
+		
+		//condition pour savoir si on doit donner une piece de 50 a la fin
+		if(centimes%2 != 0 && centimes <80)
+		{
+			pieceCinquante = true;
+			if(centimes+1 >= 5) //si on a plus de 50cts dans la somme on peut retirer 50cts
+				centimes-=5;
+			else //sinon on ajoute 50 et retire 1 du total
+			{
+				centimes+=5;
+				somme-=1;
+			}
+		}
 
 		//condition billets de 100
 		if(somme>=100)
@@ -58,9 +62,9 @@ public class CTrois
 		if(somme>=20)
 		{
 			if(somme>=40)
-				System.out.println((somme/20)+" billets de 20");
+				System.out.println((somme/20)+" billets de 20 euros");
 			else
-				System.out.println("1 billet de 20");
+				System.out.println("1 billet de 20 euros");
 
 			somme %=20; //soustraction des billets de 20
 		}
@@ -100,11 +104,16 @@ public class CTrois
 			System.out.println("1 piece de 50 centimes");
 
 		//verif pieces de 20
-		if(centimes>=20)
+		if(centimes>=2)
 		{
-			if(centimes>20)
-				System.out.println(((centimes/20)+1)+" pieces de 20 centimes"); /*+1 parce qu'on donnera toujours une
+			if(centimes>2)
+			{
+				if(centimes%2 != 0)
+					System.out.println(((centimes/2)+1)+" pieces de 20 centimes"); /*+1 parce qu'on donnera toujours une
 																				piece en plus pour ne pas "voler" le client*/
+				else
+					System.out.println((centimes/2)+" pieces de 20 centimes");
+			}
 			else
 				System.out.println("1 piece de 20 centimes");
 		}

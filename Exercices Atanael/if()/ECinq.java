@@ -1,7 +1,3 @@
-/**************
- * NON RESOLU *
-***************/
-
 import java.util.Scanner;
 
 public class ECinq
