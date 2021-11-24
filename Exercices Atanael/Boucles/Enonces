@@ -1,0 +1,29 @@
+    Enonces
+        /*
+         *  ex 1 : verifier l'anne rentre si c'est une annee bixestille  et s'arrete quand on trouve une annee bixtile
+         * 
+         *  ex 2 : affiche la suite de Fibonacci n fois selon le nombre que l'on a entre au debut du programme 
+         * 
+         *  ex 3 : affiche l'alphabet en majuscule et miniscule (la table ascii) //explique la table ascii c'est quoi 
+         * 
+         *     ex 4 : affiche la table de multplication rentre par l'utilisateur
+         * 
+         *  ex 4.2: affiche n table de multiplication jusque n element
+         * 
+         *     ex 5 : un piere papier cailloux cixeaux contre l'ordi , le gagnant est le premeir  a 3 points
+         * 
+         *     ex 6 : desine le drapeau american 
+         * 
+         * 
+         * ex 7 desine uun beau sapin de noel
+         * 
+         * 
+         *  ex 8 : insert une phrase est remplace les ' '  par des |
+         *
+         *  ex 9 : cherche dans un texte et affiche de fois que apparait chaque lettre de l'alphabet
+         *
+         *  ex 10: insert une phrase est chiffré a la methode cesar
+         *
+         *
+         *
+         * */
