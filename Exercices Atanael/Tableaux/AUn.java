@@ -19,7 +19,7 @@ public class AUn
 		//boucle d'initialisation
 		for(i = 0; i<10; i++)
 		{
-			if(i == 10) //if() pour affichage (restant au singulier a 1)
+			if(i == 9) //if() pour affichage (restant au singulier a 1)
 				System.out.print("Entrez un nombre (1 restant) : ");
 			else
 				System.out.print("Entrez un nombre ("+(10-i)+" restants) : ");
