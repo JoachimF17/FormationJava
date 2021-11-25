@@ -22,7 +22,7 @@ public class DQuatre
 
 		tab = new int[taille][taille]; //on initialise le tableau maintenant qu'on connait la taille
 
-		//initialisation de toutes les cases a 1
+		//initialisation de toutes les cases a 0
 		for(i = 0; i < taille; i++)
 		{
 			for(j = 0; j < taille; j++)
