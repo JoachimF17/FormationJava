@@ -6,7 +6,7 @@ public class CTrois
 	{
 		//variables
 		float input, max = 0.0f, min = 0.0f; //initialisation uniquement pour eviter des pb compilateur si on entre directement 100
-		int cpt = 0, posMax = 0, posMin = 0, cptMax = 0, cptMin = 0; //idem ici
+		int cpt = 0, posFirstMax = 0, posFirstMin = 0, posLastMax = 0, posLastMin = 0, cptMax = 0, cptMin = 0; //idem ici
 		//objets
 		Scanner sc = new Scanner(System.in);
 
@@ -21,13 +21,16 @@ public class CTrois
 		//condition pour initialiser les valeurs lors de la premiere entree
 		if(input != 100)
 		{
-			max = input;
-			min = input;
 			cptMax++;
 			cptMin++;
 			cpt++;
-			posMax = cpt;
-			posMin = cpt;
+			max = input;
+			min = input;
+			posFirstMax = cpt;
+			posFirstMin = cpt;
+			posLastMax = cpt;
+			posLastMin = cpt;
+			
 			System.out.print("Entrez un nombre (100 pour quitter le programme) : ");
 			input = sc.nextFloat();
 
@@ -40,12 +43,15 @@ public class CTrois
 				if(input >= max)
 				{
 					if(input == max)
+					{
 						cptMax++;
+						posLastMax = cpt;
+					}
 					else
 					{
 						max = input;
 						cptMax = 1;
-						posMax = cpt;
+						posFirstMax = cpt;
 					}
 				}
 
@@ -53,12 +59,15 @@ public class CTrois
 				if(input <= min)
 				{
 					if(input == min)
+					{
 						cptMin++;
+						posLastMin = cpt;
+					}
 					else
 					{
 						min = input;
 						cptMin = 1;
-						posMin = cpt;
+						posFirstMin = cpt;
 					}
 				}
 
@@ -77,8 +86,10 @@ public class CTrois
 			System.out.println("Min = "+min);
 			System.out.println("Nombre de fois ou vous avez entre le max = "+cptMax);
 			System.out.println("Nombre de fois ou vous avez entre le min = "+cptMin);
-			System.out.println("Position du premier max = "+posMax);
-			System.out.println("Position du premier min = "+posMin);
+			System.out.println("Position du premier max = "+posFirstMax);
+			System.out.println("Position du premier min = "+posFirstMin);
+			System.out.println("Position du dernier max = "+posLastMax);
+			System.out.println("Position du dernier min = "+posLastMin);
 		}
 	}
 }
