@@ -22,7 +22,7 @@ public class CTrois
 		for(i = 0; i<10; i++)
 			array[i] = (int) (Math.random() * 100)+1;
 
-		//initialisation du tabnleau des tentatives a zero
+		//initialisation du tableau des tentatives a zero
 		for(i = 0; i<10; i++)
 			cptArray[i] = 0;
 

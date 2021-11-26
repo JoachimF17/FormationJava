@@ -38,6 +38,7 @@ class FSix
 		
 		//affichage premiere matrice
 		System.out.println("Premiere matrice : ");
+		
 		for(i = 0; i < taille; i++)
 		{
 			for(j = 0; j < taille; j++)
@@ -48,6 +49,7 @@ class FSix
 		
 		//affichage deuxieme matrice
 		System.out.println("Deuxieme matrice : ");
+		
 		for(i = 0; i < taille; i++)
 		{
 			for(j = 0; j < taille; j++)
@@ -65,6 +67,7 @@ class FSix
 		
 		//affichage addition
 		System.out.println("Addition : ");
+		
 		for(i = 0; i < taille; i++)
 		{
 			for(j = 0; j < taille; j++)
@@ -82,6 +85,7 @@ class FSix
 		
 		//affichage soustraction
 		System.out.println("Soustraction : ");
+		
 		for(i = 0; i < taille; i++)
 		{
 			for(j = 0; j < taille; j++)
@@ -99,6 +103,7 @@ class FSix
 		
 		//affichage multiplication
 		System.out.println("Multiplication : ");
+		
 		for(i = 0; i < taille; i++)
 		{
 			for(j = 0; j < taille; j++)
